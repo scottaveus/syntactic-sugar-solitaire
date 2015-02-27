@@ -108,7 +108,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
         help.setMnemonic('v');
         help.setAccelerator(KeyStroke.getKeyStroke("F1"));
         about.setMnemonic('a');
-
+        
         loadData();
     }
 
