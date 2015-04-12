@@ -131,7 +131,6 @@ public class ColumnDriver
         {
             System.out.println("Passing Ace of Spades to pile is an INVALID move");
         }
-        
     }
     
     public static void main(String[] args)
