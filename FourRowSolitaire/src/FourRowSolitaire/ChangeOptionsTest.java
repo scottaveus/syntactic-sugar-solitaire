@@ -1,7 +1,7 @@
 package FourRowSolitaire;
 
 import javax.swing.*;
-
+ 
 public class ChangeOptionsTest {
 	
 	public static void main(String[] args){

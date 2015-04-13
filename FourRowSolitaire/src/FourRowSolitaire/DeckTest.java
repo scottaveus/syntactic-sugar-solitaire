@@ -2,7 +2,7 @@ package FourRowSolitaire;
 import java.util.LinkedList;
 
 public class DeckTest {
-	
+	 
 	public static void main(String[] args) {
 		
 		LinkedList<Integer> list = new LinkedList<Integer>();
