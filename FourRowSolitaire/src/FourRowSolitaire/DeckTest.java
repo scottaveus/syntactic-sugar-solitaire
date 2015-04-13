@@ -14,6 +14,18 @@ public class DeckTest {
 			System.out.println(card.getNumber() + " of " + card.getSuit() + "\n" + card.getColor() + card.getSource() + card.getFullNumber());
 		System.out.println();
 		
+		// Testing highlight and faceUp/faceDown
+		for (Card card:test.getDeck()){
+			card.highlight();
+			System.out.println(card.isHighlighted());
+			card.unhighlight();
+			System.out.println(card.isHighlighted());
+			card.setFaceDown();
+			card.setFaceUp();
+		}
+		System.out.println();
+		
+		
 		list.add(1);
 		list.add(15);
 		list.add(32);
@@ -46,8 +58,10 @@ public class DeckTest {
 		
 		for (Card card:test.getDeck()){
 			System.out.println(card.getNumber() + " of " + card.getSuit() + "\n" + card.getColor() + card.getSource() + card.getFullNumber());
-			list.pop();
 		}
+		
+
+		
 		
 			
 
