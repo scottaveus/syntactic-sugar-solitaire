@@ -11,7 +11,7 @@ public class DeckTest {
 		test.shuffle();
 		
 		for (Card card:test.getDeck())
-			System.out.println(card.getNumber() + " of " + card.getSuit());
+			System.out.println(card.getNumber() + " of " + card.getSuit() + "\n" + card.getColor() + card.getSource() + card.getFullNumber());
 		System.out.println();
 		
 		list.add(1);
@@ -22,7 +22,7 @@ public class DeckTest {
 		test.getDeck(list);
 		
 		for (Card card:test.getDeck()){
-			System.out.println(card.getNumber() + " of " + card.getSuit());
+			System.out.println(card.getNumber() + " of " + card.getSuit() + "\n" + card.getColor() + card.getSource() + card.getFullNumber());
 			list.pop();
 		}
 		System.out.println();
@@ -34,7 +34,7 @@ public class DeckTest {
 		test.getDeck(list);
 		
 		for (Card card:test.getDeck()){
-			System.out.println(card.getNumber() + " of " + card.getSuit());
+			System.out.println(card.getNumber() + " of " + card.getSuit() + card.getColor() + card.getSource() + card.getFullNumber());
 			list.pop();
 		}
 		
@@ -45,7 +45,7 @@ public class DeckTest {
 		test.getDeck(list);
 		
 		for (Card card:test.getDeck()){
-			System.out.println(card.getNumber() + " of " + card.getSuit());
+			System.out.println(card.getNumber() + " of " + card.getSuit() + "\n" + card.getColor() + card.getSource() + card.getFullNumber());
 			list.pop();
 		}
 		
