@@ -1524,6 +1524,8 @@ public class SolitaireBoard extends JFrame
 
         public void mouseClicked(MouseEvent e)
         {
+            System.out.println("Mouse Clicked");
+            
             if(!timer.isRunning() && timerToRun)
             {
                 timer.start();
@@ -1719,6 +1721,8 @@ public class SolitaireBoard extends JFrame
             //Stack/card already selected
             else if(e.getClickCount() == 1 && hasSelected)
             {
+                System.out.println("Column clicked");
+                
                 destination = (CardStack)e.getSource();
 
                 if(singleCardSelected)

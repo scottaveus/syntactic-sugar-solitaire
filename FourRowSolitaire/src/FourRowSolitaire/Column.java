@@ -34,11 +34,15 @@ public class Column extends CardStack
     {
         if(isEmpty() && card.getNumber() == Card.KING)
         {
+            System.out.println("Is empty and card is KING");
+            
             super.push(card);
             return card;
         }
         else if(card.getColor() != peek().getColor() && card.getNumber() == peek().getNumber() - 1)
         {
+            System.out.println("Is different color and is less than card");
+            
             super.push(card);
             return card;
         }
@@ -54,7 +58,7 @@ public class Column extends CardStack
         }
         else if(!isEmpty() && card.getColor() != peek().getColor() && card.getNumber() == (peek().getNumber() - 1))
         {
-            return false;
+            return true;
         }
 
         return false;

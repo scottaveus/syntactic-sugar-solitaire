@@ -1,5 +1,7 @@
 package FourRowSolitaire;
 
+import java.util.LinkedList;
+
 public class SolitaireBoardDriver 
 {
     public static void main(String[] args) 
@@ -55,6 +57,11 @@ public class SolitaireBoardDriver
         board.undoMove();
         
         board.getHint();
+        
+        
+        LinkedList<Integer> cards = new LinkedList<Integer>();
+        
+        board.createBoard(cards);
         
         
     }
