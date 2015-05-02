@@ -23,6 +23,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.LinkedList;
+
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
 
@@ -1258,6 +1259,11 @@ public class SolitaireBoard extends JFrame
                 numCards.removeLast();
                 numCardsInDiscardView.removeLast();
             }
+        }
+        
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Nothing to undo!");
         }
     }
 
