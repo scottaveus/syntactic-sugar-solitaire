@@ -494,6 +494,8 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
         }
         else if(e.getSource() == appearance)
         {
+            System.out.println("You want to change appearance?");
+            
             ChangeAppearance ca = new ChangeAppearance(this, super.getDeckNumber(), super.getBackgroundNumber());
             int deckNumber = ca.getDeckNumber();
             int backgroundNumber = ca.getBackgroundNumber();

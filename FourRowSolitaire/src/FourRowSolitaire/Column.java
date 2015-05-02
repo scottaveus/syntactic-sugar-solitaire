@@ -19,6 +19,8 @@
 
 package FourRowSolitaire;
 
+import javax.swing.JOptionPane;
+
 /**
  * Class: Column
  *
@@ -60,6 +62,8 @@ public class Column extends CardStack
         {
             return true;
         }
+        
+        JOptionPane.showMessageDialog(this, "Sorry, you can't do that.");
 
         return false;
     }

@@ -21,6 +21,8 @@ package FourRowSolitaire;
 
 import java.awt.Point;
 
+import javax.swing.JOptionPane;
+
 /**
  * Class: SingleCell
  *
@@ -54,6 +56,8 @@ public class SingleCell extends CardStack
         {
             return true;
         }
+        
+        JOptionPane.showMessageDialog(this, "Sorry, you can't do that.");
 
         return false;
     }

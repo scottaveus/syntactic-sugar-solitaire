@@ -23,6 +23,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Point;
 
+import javax.swing.JOptionPane;
+
 /**
  * Class: AcePile
  *
@@ -75,6 +77,8 @@ public class AcePile extends CardStack
         {
             return true;
         }
+        
+        JOptionPane.showMessageDialog(this, "Sorry, you can't do that.");
 
         return false;
     }
