@@ -19,6 +19,5 @@ public class WinScreenDriver {
 		}
 		
 		System.exit(0);
-		
 	}
 }

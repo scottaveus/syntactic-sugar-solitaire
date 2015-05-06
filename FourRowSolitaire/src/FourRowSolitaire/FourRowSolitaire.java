@@ -457,7 +457,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
             display.setBorder(null);
             display.setFont(UIManager.getFont("Label.font"));
 
-            Object[] buttons = {"Close", "Reset"};
+            Object[] buttons = {"Close", "Reset", "Export"};
             int check = JOptionPane.showOptionDialog(this, display, "Statistics", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
                     null, buttons, buttons[0]);
 
@@ -466,6 +466,62 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
                 //Reset stats
                 super.resetStats();
             }
+            
+            // This allows stats to be exported to a text file
+            else if (check == 2)
+            {
+            	try {
+            		
+        			String content = 
+        					
+        			"One-Card Draw (Easy)\t\tThree-Card Draw (Easy)\n" +
+        			"Games Played: " + gamesPlayed1e + "\t\t        Games Played: " + gamesPlayed3e +
+        			"\nGames Won: " + gamesWon1e + "\t\t\tGames Won: " + gamesWon3e + "\n" +
+        			"Win Percentage: " + winPercentage1e + "%\t\tWin Percentage: " + winPercentage3e +
+        			"%\n\nBest Streak: " + winStreak1e + "\t\t\tBest Streak: " + winStreak3e + "\n" +
+        			"Worst Streak: " + lossStreak1e + "\t\t        Worst Streak: " + lossStreak3e + "\n" +
+        			"Current Streak: " + currentStreak1e + "\t\tCurrent Streak: " + currentStreak3e + "\n" +
+        			"===================================================================\n" +
+
+        			"One-Card Draw (Medium)\t\tThree-Card Draw (Medium)\n" +
+        			"Games Played: " + gamesPlayed1m + "\t\t        Games Played: " + gamesPlayed3m +
+        			"\nGames Won: " + gamesWon1m + "\t\t\tGames Won: " + gamesWon3m + "\n" +
+        			"Win Percentage: " + winPercentage1m + "%\t\tWin Percentage: " + winPercentage3m +
+        			"%\n\nBest Streak: " + winStreak1m + "\t\t\tBest Streak: " + winStreak3m + "\n" +
+        			"Worst Streak: " + lossStreak1m + "\t\t        Worst Streak: " + lossStreak3m + "\n" +
+        			"Current Streak: " + currentStreak1m + "\t\tCurrent Streak: " + currentStreak3m + "\n" +
+        			"===================================================================\n" +
+
+        			"One-Card Draw (Hard)\t\tThree-Card Draw (Hard)\n" +
+        			"Games Played: " + gamesPlayed1h + "\t\t        Games Played: " + gamesPlayed3h +
+        			"\nGames Won: " + gamesWon1h + "\t\t\tGames Won: " + gamesWon3h + "\n" +
+        			"Win Percentage: " + winPercentage1h + "%\t\tWin Percentage: " + winPercentage3h +
+        			"%\n\nBest Streak: " + winStreak1h + "\t\t\tBest Streak: " + winStreak3h + "\n" +
+        			"Worst Streak: " + lossStreak1h + "\t\t        Worst Streak: " + lossStreak3h + "\n" +
+        			"Current Streak: " + currentStreak1h + "\t\tCurrent Streak: " + currentStreak3h;
+         
+        			String updatedText = content.replaceAll("\n", System.lineSeparator());
+        			
+        			//Below is the directory where the file is saved. I don't know how to change it.
+        			File file = new File("/Users/Public/FourRowSolitaireStats.txt"); 
+         
+        			// if file doesnt exists, then create it
+        			if (!file.exists()) {
+        				file.createNewFile();
+        			}
+         
+        			FileWriter fw = new FileWriter(file.getAbsoluteFile());
+        			BufferedWriter bw = new BufferedWriter(fw);
+        			bw.write(updatedText);
+        			bw.close();
+         
+        			System.out.println("Done");
+         
+        		} catch (IOException n) {
+        			n.printStackTrace();
+        		}
+            }
+            
             else
             {
                 //Close

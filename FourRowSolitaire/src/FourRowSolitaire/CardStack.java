@@ -181,8 +181,7 @@ public class CardStack extends JLayeredPane
         for(int i = index; i < cards.size() - 1; i++)
         {
             //Cards are not opposite colors or decreasing in value correctly
-            if(cards.get(i).getColor() == cards.get(i + 1).getColor() ||
-                    cards.get(i).getNumber() != (cards.get(i + 1).getNumber() + 1))
+            if(cards.get(i).getColor() == cards.get(i + 1).getColor() || cards.get(i).getNumber() != (cards.get(i + 1).getNumber() + 1))
             {
                 return false;
             }

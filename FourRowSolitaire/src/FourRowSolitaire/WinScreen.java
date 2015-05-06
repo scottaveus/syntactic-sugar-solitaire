@@ -158,7 +158,7 @@ public class WinScreen extends JFrame
             }
             catch(Exception ex)
             {
-                System.err.println("Error opening win sound file.");
+                System.err.println(ex);
             }
         }
     }
