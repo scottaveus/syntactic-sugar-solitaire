@@ -503,10 +503,12 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
          
         			String updatedText = content.replaceAll("\n", System.lineSeparator());
         			
-        			//Below is the directory where the file is saved. I don't know how to change it.
-        			File file = new File("/Users/Public/FourRowSolitaireStats.txt"); 
+        			// Get Desktop 
+        			String filePath = System.getProperty("user.home") + "/Desktop";
+        			// Create file for Desktop
+        			File file = new File(filePath, "FourRowSolitaireStats.txt");
          
-        			// if file doesnt exists, then create it
+        			// If file doesn't exist, then create it
         			if (!file.exists()) {
         				file.createNewFile();
         			}
@@ -516,7 +518,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
         			bw.write(updatedText);
         			bw.close();
          
-        			JOptionPane.showMessageDialog(this, "Your stats have been saved to the Users/Public");
+        			JOptionPane.showMessageDialog(this, "Your Statistics are located in " + filePath);
          
         		} catch (IOException n) {
         			n.printStackTrace();
