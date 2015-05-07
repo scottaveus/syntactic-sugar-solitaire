@@ -25,6 +25,7 @@ import java.io.*;
 import java.net.URI;
 import java.net.URL;
 import java.util.LinkedList;
+
 import javax.swing.*;
 
 /**
@@ -515,7 +516,7 @@ public class FourRowSolitaire extends SolitaireBoard implements ActionListener
         			bw.write(updatedText);
         			bw.close();
          
-        			System.out.println("Done");
+        			JOptionPane.showMessageDialog(this, "Your stats have been saved to the Users/Public");
          
         		} catch (IOException n) {
         			n.printStackTrace();
